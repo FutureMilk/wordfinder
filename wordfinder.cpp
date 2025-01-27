@@ -1,5 +1,8 @@
 #include <iostream>
 #include <vector>
+#include <string>
+#include <bits/stdc++.h>
+
 
 using namespace std;
 
@@ -104,25 +107,68 @@ void suggestionsRec(struct TrieNode* root, string currPrefix)
 
 int main() {
   
-    // Create am example Trie
-    TrieNode* root = new TrieNode();
-    vector<string> arr =  {"and", "ant", "do", "geek", "dad", "ball"};
-    for (const string& s : arr) {
-        insertKey(root, s);
-    }
-
-    // One by one search strings
-    vector<string> searchKeys = {"do", "gee", "bat"};
-    suggestionsRec(root, "an");
-    // for (string& s : searchKeys) {
-    //     cout << "Key : " << s << "\n";
-    //     if (searchKey(root, s)) 
-    //         cout << "Present\n";
-    //     else 
-    //         cout << "Not Present\n";        
+    // // Create am example Trie
+    // TrieNode* root = new TrieNode();
+    // vector<string> arr =  {"and", "ant", "do", "geek", "dad", "ball"};
+    // for (const string& s : arr) {
+    //     insertKey(root, s);
     // }
 
+    
+
+    //load all the words into a vector
+    vector<string> dictionary;
+    dictionary.reserve(178692);   //reserve the exact amount of space in the vector as words in dictionary
+
+    string word;
+    int count = 0;
+    while (cin >> word) {
+        dictionary.push_back(word);
+        count++;
+    }
+
+    // cout << "What's your fuckin word: ";
+
+    // string unknown;
+    // cout << count;
+    // cin >> unknown;
+
+    //how would I take in the word as well??? possibly as a 
+    //cmd line arg
+    while (next_permutation(unknown.begin(), unknown.end())) {
+        cout << unknown << "\n";
+    }
+
+
+    /*
+    
+    
+    string s("ABC");
+do {
+    cout << s << endl;
+} while (next_permutation(s.begin(), s.end()));
+
+*/
+\
+
+
+    // // One by one search strings
+    // vector<string> searchKeys = {"do", "gee", "bat"};
+    // suggestionsRec(root, "an");
+    // // for (string& s : searchKeys) {
+    // //     cout << "Key : " << s << "\n";
+    // //     if (searchKey(root, s)) 
+    // //         cout << "Present\n";
+    // //     else 
+    // //         cout << "Not Present\n";        
+    // // }
+
     //make some sort of delete function
+    // string word;
+    
+    // while (cin >> word) {
+    //     cout << word << "\n";
+    // }
   
     return 0;
 }

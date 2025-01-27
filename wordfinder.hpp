@@ -22,11 +22,8 @@ void getMode(int argc, char * argv[]) {
         switch (choice) {
             case 'm': {
                 string arg{optarg};
-                if (arg != "MST" && arg != "FASTTSP" && arg != "OPTTSP") {
-                    cerr << "Error: Invalid mode\n";
-                    exit(1);
-                }
                 // ketchum.mode = arg[0];
+                cout << "This is the scrambled word: " << arg;
                 break; 
             }
             case 'h': 
@@ -39,4 +36,7 @@ void getMode(int argc, char * argv[]) {
         }  //  switch 
     }  //  while 
 }  // getMode()
+
+
+
 
